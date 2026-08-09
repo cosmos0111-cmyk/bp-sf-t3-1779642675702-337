@@ -1,513 +1,511 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정보 | 백링크 자동화 프로그램 - 마포 스트릿패션</title>
-    <meta name="description" content="마포 스트릿패션 브랜드의 백링크 자동화 프로그램. 에디토리얼 럭셔리 감성으로 패션과 테크의 경계를 허물다. 지금 바로 도전하세요.">
-    <meta name="keywords" content="백링크 자동화 프로그램, 마포 스트릿패션, 스트릿패션, 백링크, 자동화, 에디토리얼 럭셔리, 패션 테크, 마포, 정보">
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-ivory-ink">
-    <link rel="canonical" href="https://sf-t3-1779642675702-337.maphoshirts.xyz/about.html">
-    <meta property="og:title" content="정보 | 백링크 자동화 프로그램 - 마포 스트릿패션">
-    <meta property="og:description" content="마포 스트릿패션 브랜드의 백링크 자동화 프로그램. 에디토리얼 럭셔리 감성으로 패션과 테크의 경계를 허물다. 지금 바로 도전하세요.">
-    <meta property="og:image" content="https://sf-t3-1779642675702-337.vercel.app/og-image.jpg">
-    <meta property="og:url" content="https://sf-t3-1779642675702-337.maphoshirts.xyz/about.html">
-    <meta name="twitter:card" content="summary">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #faf8f5;
-            color: #1a1a1a;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(250, 248, 245, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding: 16px 0;
-            transition: all 0.3s ease;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            font-style: italic;
-            letter-spacing: -0.5px;
-            color: #1a1a1a;
-            text-decoration: none;
-        }
-        .logo span {
-            color: #8b7d6b;
-        }
-        nav {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-        }
-        nav a {
-            text-decoration: none;
-            color: #1a1a1a;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: #1a1a1a;
-            transition: width 0.3s ease;
-        }
-        nav a:hover::after {
-            width: 100%;
-        }
-        nav a:hover {
-            color: #8b7d6b;
-        }
-        nav a.active {
-            color: #8b7d6b;
-        }
-        nav a.active::after {
-            width: 100%;
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 8px;
-            background: none;
-            border: none;
-        }
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 1.5px;
-            background: #1a1a1a;
-            transition: all 0.3s ease;
-        }
-        .mobile-nav {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(250, 248, 245, 0.98);
-            backdrop-filter: blur(20px);
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 32px;
-            z-index: 999;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-        }
-        .mobile-nav.open {
-            opacity: 1;
-            pointer-events: all;
-        }
-        .mobile-nav a {
-            text-decoration: none;
-            color: #1a1a1a;
-            font-size: 24px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-        .mobile-nav a:hover {
-            color: #8b7d6b;
-        }
-        .hero {
-            padding: 160px 0 80px;
-            position: relative;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1px;
-            height: 100px;
-            background: linear-gradient(to bottom, transparent, #1a1a1a);
-            opacity: 0.2;
-        }
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 56px;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            letter-spacing: -1px;
-        }
-        .hero p {
-            font-size: 18px;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            font-weight: 300;
-            line-height: 1.8;
-        }
-        .section {
-            padding: 80px 0;
-        }
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 48px;
-            text-align: center;
-            letter-spacing: -0.5px;
-        }
-        .section-subtitle {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #8b7d6b;
-            margin-bottom: 16px;
-            font-weight: 600;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-        }
-        .card {
-            background: #fff;
-            padding: 40px;
-            border-radius: 4px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.04);
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
-        }
-        .card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-        .card p {
-            color: #666;
-            font-size: 15px;
-            line-height: 1.8;
-        }
-        .card .number {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: #8b7d6b;
-            margin-bottom: 16px;
-            line-height: 1;
-        }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
-            margin-top: 48px;
-        }
-        .feature-item {
-            text-align: center;
-            padding: 32px 24px;
-            border: 1px solid rgba(0,0,0,0.06);
-            border-radius: 4px;
-        }
-        .feature-item .icon {
-            font-size: 32px;
-            margin-bottom: 16px;
-        }
-        .feature-item h4 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            letter-spacing: 0.5px;
-        }
-        .feature-item p {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.7;
-        }
-        .faq {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .faq-item {
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            padding: 24px 0;
-        }
-        .faq-item:first-child {
-            border-top: 1px solid rgba(0,0,0,0.06);
-        }
-        .faq-question {
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-        .faq-question:hover {
-            color: #8b7d6b;
-        }
-        .faq-question::after {
-            content: '+';
-            font-size: 24px;
-            font-weight: 300;
-            transition: transform 0.3s ease;
-        }
-        .faq-question.open::after {
-            transform: rotate(45deg);
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-            color: #666;
-            font-size: 15px;
-            line-height: 1.8;
-        }
-        .faq-answer.open {
-            max-height: 300px;
-            padding-top: 16px;
-        }
-        .cta {
-            background: #1a1a1a;
-            color: #faf8f5;
-            padding: 80px 0;
-            text-align: center;
-        }
-        .cta h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-        .cta p {
-            font-size: 18px;
-            color: rgba(250, 248, 245, 0.7);
-            max-width: 500px;
-            margin: 0 auto 32px;
-            font-weight: 300;
-        }
-        .cta .btn {
-            display: inline-block;
-            padding: 16px 48px;
-            background: #faf8f5;
-            color: #1a1a1a;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .cta .btn:hover {
-            background: #8b7d6b;
-            color: #faf8f5;
-        }
-        footer {
-            padding: 48px 0;
-            text-align: center;
-            border-top: 1px solid rgba(0,0,0,0.06);
-        }
-        footer p {
-            color: #999;
-            font-size: 13px;
-            letter-spacing: 1px;
-        }
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .mobile-nav {
-                display: flex;
-            }
-            .hero h1 {
-                font-size: 36px;
-            }
-            .hero {
-                padding: 120px 0 60px;
-                min-height: auto;
-            }
-            .section-title {
-                font-size: 28px;
-            }
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            .features {
-                grid-template-columns: 1fr;
-            }
-            .cta h2 {
-                font-size: 32px;
-            }
-            .card {
-                padding: 24px;
-            }
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>정보 | 백링크 자동화 프로그램 - 마포 스트릿패션</title>
+ <meta name="description" content="마포 스트릿패션 브랜드의 백링크 자동화 프로그램. 에디토리얼 럭셔리 감성으로 패션과 테크의 경계를 허물다. 지금 바로 도전하세요.">
+ <meta name="keywords" content="백링크 자동화 프로그램, 마포 스트릿패션, 스트릿패션, 백링크, 자동화, 에디토리얼 럭셔리, 패션 테크, 마포, 정보">
+ <link rel="canonical" href="https://sf-t3-1779642675702-337.maphoshirts.xyz/about.html">
+ <meta property="og:title" content="정보 | 백링크 자동화 프로그램 - 마포 스트릿패션">
+ <meta property="og:description" content="마포 스트릿패션 브랜드의 백링크 자동화 프로그램. 에디토리얼 럭셔리 감성으로 패션과 테크의 경계를 허물다. 지금 바로 도전하세요.">
+ <meta property="og:image" content="https://sf-t3-1779642675702-337.vercel.app/og-image.jpg">
+ <meta property="og:url" content="https://sf-t3-1779642675702-337.maphoshirts.xyz/about.html">
+ <meta name="twitter:card" content="summary">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: 'Inter', sans-serif;
+ background: #faf8f5;
+ color: #1a1a1a;
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ z-index: 1000;
+ background: rgba(250, 248, 245, 0.95);
+ backdrop-filter: blur(20px);
+ border-bottom: 1px solid rgba(0,0,0,0.05);
+ padding: 16px 0;
+ transition: all 0.3s ease;
+ }
+ header .container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-family: 'Playfair Display', serif;
+ font-size: 24px;
+ font-weight: 700;
+ font-style: italic;
+ letter-spacing: -0.5px;
+ color: #1a1a1a;
+ text-decoration: none;
+ }
+ .logo span {
+ color: #8b7d6b;
+ }
+ nav {
+ display: flex;
+ gap: 32px;
+ align-items: center;
+ }
+ nav a {
+ text-decoration: none;
+ color: #1a1a1a;
+ font-size: 13px;
+ font-weight: 500;
+ letter-spacing: 1.5px;
+ text-transform: uppercase;
+ transition: color 0.3s ease;
+ position: relative;
+ }
+ nav a::after {
+ content: '';
+ position: absolute;
+ bottom: -4px;
+ left: 0;
+ width: 0;
+ height: 1px;
+ background: #1a1a1a;
+ transition: width 0.3s ease;
+ }
+ nav a:hover::after {
+ width: 100%;
+ }
+ nav a:hover {
+ color: #8b7d6b;
+ }
+ nav a.active {
+ color: #8b7d6b;
+ }
+ nav a.active::after {
+ width: 100%;
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ padding: 8px;
+ background: none;
+ border: none;
+ }
+ .hamburger span {
+ display: block;
+ width: 24px;
+ height: 1.5px;
+ background: #1a1a1a;
+ transition: all 0.3s ease;
+ }
+ .mobile-nav {
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100vh;
+ background: rgba(250, 248, 245, 0.98);
+ backdrop-filter: blur(20px);
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 32px;
+ z-index: 999;
+ opacity: 0;
+ pointer-events: none;
+ transition: opacity 0.4s ease;
+ }
+ .mobile-nav.open {
+ opacity: 1;
+ pointer-events: all;
+ }
+ .mobile-nav a {
+ text-decoration: none;
+ color: #1a1a1a;
+ font-size: 24px;
+ font-weight: 500;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ transition: color 0.3s ease;
+ }
+ .mobile-nav a:hover {
+ color: #8b7d6b;
+ }
+ .hero {
+ padding: 160px 0 80px;
+ position: relative;
+ min-height: 60vh;
+ display: flex;
+ align-items: center;
+ }
+ .hero::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 50%;
+ transform: translateX(-50%);
+ width: 1px;
+ height: 100px;
+ background: linear-gradient(to bottom, transparent, #1a1a1a);
+ opacity: 0.2;
+ }
+ .hero-content {
+ max-width: 800px;
+ margin: 0 auto;
+ text-align: center;
+ }
+ .hero h1 {
+ font-family: 'Playfair Display', serif;
+ font-size: 56px;
+ font-weight: 700;
+ line-height: 1.1;
+ margin-bottom: 24px;
+ letter-spacing: -1px;
+ }
+ .hero p {
+ font-size: 18px;
+ color: #666;
+ max-width: 600px;
+ margin: 0 auto 40px;
+ font-weight: 300;
+ line-height: 1.8;
+ }
+ .section {
+ padding: 80px 0;
+ }
+ .section-title {
+ font-family: 'Playfair Display', serif;
+ font-size: 36px;
+ font-weight: 700;
+ margin-bottom: 48px;
+ text-align: center;
+ letter-spacing: -0.5px;
+ }
+ .section-subtitle {
+ font-size: 13px;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ color: #8b7d6b;
+ margin-bottom: 16px;
+ font-weight: 600;
+ }
+ .grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 32px;
+ }
+ .card {
+ background: #fff;
+ padding: 40px;
+ border-radius: 4px;
+ box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+ transition: all 0.3s ease;
+ border: 1px solid rgba(0,0,0,0.04);
+ }
+ .card:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+ }
+ .card h3 {
+ font-family: 'Playfair Display', serif;
+ font-size: 22px;
+ font-weight: 700;
+ margin-bottom: 16px;
+ }
+ .card p {
+ color: #666;
+ font-size: 15px;
+ line-height: 1.8;
+ }
+ .card .number {
+ font-family: 'Playfair Display', serif;
+ font-size: 48px;
+ font-weight: 700;
+ color: #8b7d6b;
+ margin-bottom: 16px;
+ line-height: 1;
+ }
+ .features {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 24px;
+ margin-top: 48px;
+ }
+ .feature-item {
+ text-align: center;
+ padding: 32px 24px;
+ border: 1px solid rgba(0,0,0,0.06);
+ border-radius: 4px;
+ }
+ .feature-item .icon {
+ font-size: 32px;
+ margin-bottom: 16px;
+ }
+ .feature-item h4 {
+ font-size: 16px;
+ font-weight: 600;
+ margin-bottom: 12px;
+ letter-spacing: 0.5px;
+ }
+ .feature-item p {
+ color: #666;
+ font-size: 14px;
+ line-height: 1.7;
+ }
+ .faq {
+ max-width: 800px;
+ margin: 0 auto;
+ }
+ .faq-item {
+ border-bottom: 1px solid rgba(0,0,0,0.06);
+ padding: 24px 0;
+ }
+ .faq-item:first-child {
+ border-top: 1px solid rgba(0,0,0,0.06);
+ }
+ .faq-question {
+ font-size: 18px;
+ font-weight: 600;
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ transition: color 0.3s ease;
+ }
+ .faq-question:hover {
+ color: #8b7d6b;
+ }
+ .faq-question::after {
+ content: '+';
+ font-size: 24px;
+ font-weight: 300;
+ transition: transform 0.3s ease;
+ }
+ .faq-question.open::after {
+ transform: rotate(45deg);
+ }
+ .faq-answer {
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.4s ease, padding 0.4s ease;
+ color: #666;
+ font-size: 15px;
+ line-height: 1.8;
+ }
+ .faq-answer.open {
+ max-height: 300px;
+ padding-top: 16px;
+ }
+ .cta {
+ background: #1a1a1a;
+ color: #faf8f5;
+ padding: 80px 0;
+ text-align: center;
+ }
+ .cta h2 {
+ font-family: 'Playfair Display', serif;
+ font-size: 42px;
+ font-weight: 700;
+ margin-bottom: 24px;
+ }
+ .cta p {
+ font-size: 18px;
+ color: rgba(250, 248, 245, 0.7);
+ max-width: 500px;
+ margin: 0 auto 32px;
+ font-weight: 300;
+ }
+ .cta .btn {
+ display: inline-block;
+ padding: 16px 48px;
+ background: #faf8f5;
+ color: #1a1a1a;
+ text-decoration: none;
+ font-size: 13px;
+ font-weight: 600;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ }
+ .cta .btn:hover {
+ background: #8b7d6b;
+ color: #faf8f5;
+ }
+ footer {
+ padding: 48px 0;
+ text-align: center;
+ border-top: 1px solid rgba(0,0,0,0.06);
+ }
+ footer p {
+ color: #999;
+ font-size: 13px;
+ letter-spacing: 1px;
+ }
+ @media (max-width: 768px) {
+ nav {
+ display: none;
+ }
+ .hamburger {
+ display: flex;
+ }
+ .mobile-nav {
+ display: flex;
+ }
+ .hero h1 {
+ font-size: 36px;
+ }
+ .hero {
+ padding: 120px 0 60px;
+ min-height: auto;
+ }
+ .section-title {
+ font-size: 28px;
+ }
+ .grid {
+ grid-template-columns: 1fr;
+ }
+ .features {
+ grid-template-columns: 1fr;
+ }
+ .cta h2 {
+ font-size: 32px;
+ }
+ .card {
+ padding: 24px;
+ }
+ }
+ </style>
   <meta property="og:type" content="website">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">MP<span>STR</span></a>
-            <nav>
-                <a href="/">홈</a>
-                <a href="/info" class="active">정보</a>
-                <a href="/features">기능</a>
-                <a href="/pricing">가격</a>
-                <a href="tel:+820212345678">02-1234-5678</a>
-            </nav>
-            <button class="hamburger" onclick="toggleMobileNav()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+ <header>
+ <div class="container">
+ <a href="/" class="logo">MP<span>STR</span></a>
+ <nav>
+ <a href="/">홈</a>
+ <a href="/info" class="active">정보</a>
+ <a href="/features">기능</a>
+ <a href="/pricing">가격</a>
+ 
+ </nav>
+ <button class="hamburger" onclick="toggleMobileNav()">
+ 
+ 
+ 
+ </button>
+ </div>
+ </header>
 
 <main>
-  <section class="hero">
-    <div class="container hero-content">
-      <h1>백링크 자동화 프로그램 정보 안내</h1>
-      <p class="section-subtitle">마포 스트릿패션 관련 웹사이트 운영자를 위한 백링크 자동화 프로그램 기초 정보 페이지입니다.</p>
-    </div>
-  </section>
+ <section class="hero">
+ <div class="container hero-content">
+ <h1>백링크 자동화 프로그램 정보 안내</h1>
+ <p class="section-subtitle">마포 스트릿패션 관련 웹사이트 운영자를 위한 백링크 자동화 프로그램 기초 정보 페이지입니다.</p>
+ </div>
+ </section>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">백링크 자동화 프로그램이란</h2>
-      <p>백링크 자동화 프로그램은 여러 웹사이트에 링크를 등록하고 상태를 관리하는 과정을 정해진 절차로 처리하는 도구를 가리키는 말로 쓰입니다. 수작업으로 하나씩 등록하고 점검하던 작업을 순서대로 자동 처리해 운영에 드는 시간을 줄이는 데 목적이 있습니다. 온라인으로 매장이나 브랜드를 알리는 곳에서는 이런 도구의 개념을 참고해 운영 방식을 정리하는 경우가 있습니다.</p>
-    </div>
-  </section>
+ <section class="section">
+ <div class="container">
+ <h2 class="section-title">백링크 자동화 프로그램이란</h2>
+ <p>백링크 자동화 프로그램은 여러 웹사이트에 링크를 등록하고 상태를 관리하는 과정을 정해진 절차로 처리하는 도구를 가리키는 말로 쓰입니다. 수작업으로 하나씩 등록하고 점검하던 작업을 순서대로 자동 처리해 운영에 드는 시간을 줄이는 데 목적이 있습니다. 온라인으로 매장이나 브랜드를 알리는 곳에서는 이런 도구의 개념을 참고해 운영 방식을 정리하는 경우가 있습니다.</p>
+ </div>
+ </section>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">도구를 고를 때 확인하는 항목</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="number">01</span>
-          <h3>등록 대상 범위</h3>
-          <p>어떤 유형의 사이트에 등록되는지, 등록 속도와 주기를 조절할 수 있는지를 먼저 확인합니다.</p>
-        </div>
-        <div class="card">
-          <span class="number">02</span>
-          <h3>관리 기능</h3>
-          <p>등록 이후 상태를 점검하고 오류가 발생한 항목을 다시 확인할 수 있는 기능이 있는지 살펴봅니다.</p>
-        </div>
-        <div class="card">
-          <span class="number">03</span>
-          <h3>운영 기록</h3>
-          <p>작업 이력이 남아 담당자가 바뀌어도 이전 진행 상황을 참고할 수 있는지도 비교할 항목입니다.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+ <section class="section">
+ <div class="container">
+ <h2 class="section-title">도구를 고를 때 확인하는 항목</h2>
+ <div class="grid">
+ <div class="card">
+ <span class="number">01</span>
+ <h3>등록 대상 범위</h3>
+ <p>어떤 유형의 사이트에 등록되는지, 등록 속도와 주기를 조절할 수 있는지를 먼저 확인합니다.</p>
+ </div>
+ <div class="card">
+ <span class="number">02</span>
+ <h3>관리 기능</h3>
+ <p>등록 이후 상태를 점검하고 오류가 발생한 항목을 다시 확인할 수 있는 기능이 있는지 살펴봅니다.</p>
+ </div>
+ <div class="card">
+ <span class="number">03</span>
+ <h3>운영 기록</h3>
+ <p>작업 이력이 남아 담당자가 바뀌어도 이전 진행 상황을 참고할 수 있는지도 비교할 항목입니다.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">함께 살펴보는 요소</h2>
-      <div class="features">
-        <div class="feature-item">
-          <span class="icon">1</span>
-          <p>등록 속도를 사용자가 직접 조절할 수 있는지</p>
-        </div>
-        <div class="feature-item">
-          <span class="icon">2</span>
-          <p>중복 등록이나 오류를 걸러주는 절차가 있는지</p>
-        </div>
-        <div class="feature-item">
-          <span class="icon">3</span>
-          <p>진행 결과를 정리된 형태로 확인할 수 있는지</p>
-        </div>
-        <div class="feature-item">
-          <span class="icon">4</span>
-          <p>담당자가 바뀌어도 이어서 관리할 수 있는 구조인지</p>
-        </div>
-      </div>
-    </div>
-  </section>
+ <section class="section">
+ <div class="container">
+ <h2 class="section-title">함께 살펴보는 요소</h2>
+ <div class="features">
+ <div class="feature-item">
+ <span class="icon">1</span>
+ <p>등록 속도를 사용자가 직접 조절할 수 있는지</p>
+ </div>
+ <div class="feature-item">
+ <span class="icon">2</span>
+ <p>중복 등록이나 오류를 걸러주는 절차가 있는지</p>
+ </div>
+ <div class="feature-item">
+ <span class="icon">3</span>
+ <p>진행 결과를 정리된 형태로 확인할 수 있는지</p>
+ </div>
+ <div class="feature-item">
+ <span class="icon">4</span>
+ <p>담당자가 바뀌어도 이어서 관리할 수 있는 구조인지</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">자주 묻는 질문</h2>
-      <div class="faq">
-        <div class="faq-item">
-          <p class="faq-question">처음 다루는 담당자도 관리할 수 있나요?</p>
-          <p class="faq-answer">기본 항목 입력과 점검 절차를 순서대로 따라가는 구조가 많아 처음 접하는 담당자도 안내에 따라 진행할 수 있습니다.</p>
-        </div>
-        <div class="faq-item">
-          <p class="faq-question">마포 지역 업체에만 해당되는 내용인가요?</p>
-          <p class="faq-answer">지역과 관계없이 온라인으로 정보를 노출하려는 곳이라면 참고할 수 있는 일반적인 안내입니다.</p>
-        </div>
-        <div class="faq-item">
-          <p class="faq-question">스트릿패션 업종에도 적용할 수 있나요?</p>
-          <p class="faq-answer">업종과 관계없이 웹사이트를 운영하며 정보 노출을 관리하는 곳이라면 공통으로 참고할 수 있는 내용입니다.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+ <section class="section">
+ <div class="container">
+ <h2 class="section-title">자주 묻는 질문</h2>
+ <div class="faq">
+ <div class="faq-item">
+ <p class="faq-question">처음 다루는 담당자도 관리할 수 있나요?</p>
+ <p class="faq-answer">기본 항목 입력과 점검 절차를 순서대로 따라가는 구조가 많아 처음 접하는 담당자도 안내에 따라 진행할 수 있습니다.</p>
+ </div>
+ <div class="faq-item">
+ <p class="faq-question">마포 지역 업체에만 해당되는 내용인가요?</p>
+ <p class="faq-answer">지역과 관계없이 온라인으로 정보를 노출하려는 곳이라면 참고할 수 있는 일반적인 안내입니다.</p>
+ </div>
+ <div class="faq-item">
+ <p class="faq-question">스트릿패션 업종에도 적용할 수 있나요?</p>
+ <p class="faq-answer">업종과 관계없이 웹사이트를 운영하며 정보 노출을 관리하는 곳이라면 공통으로 참고할 수 있는 내용입니다.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <section class="section cta">
-    <div class="container">
-      <h2 class="section-title">문의 안내</h2>
-      <p>자세한 내용이 궁금하다면 아래 연락처로 문의해 주세요.</p>
-      <a class="btn" href="tel:+820212345678">+820212345678</a>
-    </div>
-  </section>
+ <section class="section cta">
+ <div class="container">
+ <h2 class="section-title">문의 안내</h2>
+ <p>자세한 내용이 궁금하다면 아래 연락처로 문의해 주세요.</p>
+ 
+ </div>
+ </section>
 </main>
 
 
